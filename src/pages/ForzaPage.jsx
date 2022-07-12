@@ -1,3 +1,4 @@
+import React from 'react';
 export default function ForzaPage() {
   return (
     <article className="article">

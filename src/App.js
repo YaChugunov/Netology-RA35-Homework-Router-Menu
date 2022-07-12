@@ -1,13 +1,20 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link,
+  NavLink,
+} from 'react-router-dom';
 
-import './style.css';
+import './css/style.css';
 
 import Menu from './Menu';
-import HomePage from './HomePage';
-import DriftPage from './DriftPage';
-import ForzaPage from './ForzaPage';
-import TimeAttackPage from './TimeAttackPage';
+import HomePage from './pages/HomePage';
+import DriftPage from './pages/DriftPage';
+import ForzaPage from './pages/ForzaPage';
+import TimeAttackPage from './pages/TimeAttackPage';
 
 export default function App() {
   return (
@@ -15,12 +22,12 @@ export default function App() {
       <div>
         <Menu />
         <div className="page">
-          <Switch>
-            <Route path="/">{HomePage}</Route>
-            <Route path="/drift">{DriftPage}</Route>
-            <Route path="/timeattack">{TimeAttackPage}</Route>
-            <Route path="/forza">{ForzaPage}</Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/drift" element={<DriftPage />} />
+            <Route path="/timeattack" element={<TimeAttackPage />} />
+            <Route path="/forza" element={<ForzaPage />} />
+          </Routes>
         </div>
       </div>
     </Router>

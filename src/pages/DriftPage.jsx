@@ -1,3 +1,4 @@
+import React from 'react';
 export default function DriftPage() {
   return (
     <article className="article">
