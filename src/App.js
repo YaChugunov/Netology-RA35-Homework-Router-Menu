@@ -1,12 +1,5 @@
 import * as React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-  Link,
-  NavLink,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './css/style.css';
 
@@ -18,7 +11,7 @@ import TimeAttackPage from './pages/TimeAttackPage';
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <Menu />
         <div className="page">
@@ -30,6 +23,6 @@ export default function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
