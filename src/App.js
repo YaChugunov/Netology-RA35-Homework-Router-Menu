@@ -16,7 +16,6 @@ export default function App() {
         <Menu />
         <div className="page">
           <main>
-            {/* <Switch> рендерит первый <Route>, совпавший с URL */}
             <Switch>
               <Route path="/">
                 <HomePage />
