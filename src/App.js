@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './style.css';
@@ -15,22 +15,12 @@ export default function App() {
       <div>
         <Menu />
         <div className="page">
-          <main>
-            <Switch>
-              <Route path="/">
-                <HomePage />
-              </Route>
-              <Route path="/drift">
-                <DriftPage />
-              </Route>
-              <Route path="/timeattack">
-                <TimeAttackPage />
-              </Route>
-              <Route path="/forza">
-                <ForzaPage />
-              </Route>
-            </Switch>
-          </main>
+          <Switch>
+            <Route path="/">{HomePage}</Route>
+            <Route path="/drift">{DriftPage}</Route>
+            <Route path="/timeattack">{TimeAttackPage}</Route>
+            <Route path="/forza">{ForzaPage}</Route>
+          </Switch>
         </div>
       </div>
     </Router>

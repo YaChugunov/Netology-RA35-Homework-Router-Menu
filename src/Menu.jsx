@@ -1,20 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Menu() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Главная</Link>
-        </li>
-        <li>
-          <Link to="/about">Контакты</Link>
-        </li>
-        <li>
-          <Link to="/users">Пользователи</Link>
-        </li>
-      </ul>
+    <nav className="menu">
+      <NavLink className="menu__item" to="/">
+        Главная
+      </NavLink>
+      <NavLink className="menu__item" to="/drift">
+        Дрифт-такси
+      </NavLink>
+      <NavLink className="menu__item" to="/timeattack">
+        Time Attack
+      </NavLink>
+      <NavLink className="menu__item" to="/forza">
+        Forza Karting
+      </NavLink>
     </nav>
   );
 }
